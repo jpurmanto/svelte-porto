@@ -28,14 +28,14 @@
       </div>
     </div>
   </div>
-  <div class={`fixed w-full overflow-x-hidden flex flex-col lg:hidden gap-12 origin-top duration-700 ${toggleMenu ? 'h-[320px]' : 'h-0'}`}>
+  <div class={`fixed w-full overflow-x-hidden flex flex-col lg:hidden gap-12 origin-top transition-all duration-500 ${toggleMenu ? 'h-[320px] opacity-100' : 'h-0 opacity-0'}`}>
     <div class="w-[90%] mt-5 mx-[5%] relative backdrop-filter bg-tokyo-night-darkBlue backdrop-blur-lg bg-opacity-90 py-5 border border-white rounded-md">
       <div class="mx-8 flex flex-col gap-8 font-bold tracking-wider">
-        <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Experience</a>
-        <a href="#">Projects</a>
-        <a href="#">Contact</a>
+        <a href="#" class="transition-colors hover:text-gray-300">Home</a>
+        <a href="#" class="transition-colors hover:text-gray-300">About</a>
+        <a href="#" class="transition-colors hover:text-gray-300">Experience</a>
+        <a href="#" class="transition-colors hover:text-gray-300">Projects</a>
+        <a href="#" class="transition-colors hover:text-gray-300">Contact</a>
       </div>
     </div>
   </div>
