@@ -4,6 +4,14 @@
   const toggleNavbar = () => {
     toggleMenu = !toggleMenu;
   };
+
+  const links = {
+    Home: "#",
+    About: "#",
+    Experience: "#",
+    Projects: "#",
+    Contact: "#",
+  };
 </script>
 
 <nav class="fixed w-full backdrop-blur-lg bg-opacity-90 text-tokyo-night-foreground bg-tokyo-night-background z-50">
@@ -13,11 +21,9 @@
         <span class="text-3xl font-bold">slowcode07</span>
       </div>
       <div class="hidden lg:flex gap-8 ml-auto">
-        <a href="#" class="rounded-full hover:bg-gray-800 px-4 py-2">Home</a>
-        <a href="#" class="rounded-full hover:bg-gray-800 px-4 py-2">About</a>
-        <a href="#" class="rounded-full hover:bg-gray-800 px-4 py-2">Experience</a>
-        <a href="#" class="rounded-full hover:bg-gray-800 px-4 py-2">Projects</a>
-        <a href="#" class="rounded-full hover:bg-gray-800 px-4 py-2">Contact</a>
+        {#each Object.entries(links) as [name, url]}
+          <a href={url} class="rounded-full hover:bg-gray-800 px-4 py-2">{name}</a>
+        {/each}
       </div>
       <div class="flex gap-6 lg:hidden">
         <button on:click={toggleNavbar}>
@@ -28,20 +34,23 @@
       </div>
     </div>
   </div>
-  <div class={`fixed w-full overflow-x-hidden flex flex-col lg:hidden gap-12 origin-top transition-all duration-500 ${toggleMenu ? 'h-[320px] opacity-100' : 'h-0 opacity-0'}`}>
-    <div class="w-[90%] mt-5 mx-[5%] relative backdrop-filter bg-tokyo-night-darkBlue backdrop-blur-lg bg-opacity-90 py-5 border border-white rounded-md">
+  <div class={`fixed w-full overflow-x-hidden flex flex-col lg:hidden gap-12 origin-top transition-all duration-300 ${toggleMenu ? 'max-h-[320px] opacity-100' : 'max-h-0 opacity-0'}`}>
+    <div class="w-[90%] mt-5 mx-[5%] relative backdrop-filter bg-tokyo-night-darkBlue bg-opacity-100 py-5 border border-white rounded-md">
       <div class="mx-8 flex flex-col gap-8 font-bold tracking-wider">
-        <a href="#" class="transition-colors hover:text-gray-300">Home</a>
-        <a href="#" class="transition-colors hover:text-gray-300">About</a>
-        <a href="#" class="transition-colors hover:text-gray-300">Experience</a>
-        <a href="#" class="transition-colors hover:text-gray-300">Projects</a>
-        <a href="#" class="transition-colors hover:text-gray-300">Contact</a>
+        {#each Object.entries(links) as [name, url]}
+          <a href={url} class="transition-colors hover:text-gray-300">{name}</a>
+        {/each}
       </div>
     </div>
   </div>
 </nav>
 
 <style>
+  .navbar-menu {
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+    overflow: hidden;
+  }
+
   .animate-fade-in {
     animation: fade-in 0.5s ease forwards;
     opacity: 0;
