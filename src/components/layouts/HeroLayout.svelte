@@ -15,9 +15,8 @@
       <HeroDescription />
       <div class="flex flex-col sm:flex-row justify-center sm:justify-start gap-4">
         <Button href="#portfolio" text="Download CV" primary />
-        <Button href="#contact" text="Github" />
+        <Button href="https://github.com/rafia9005" text="Github" />
       </div>
     </div>
   </div>
 </section>
-
