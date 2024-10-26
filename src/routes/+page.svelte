@@ -1,8 +1,9 @@
 <script>
   import NavbarLayout from "../components/layouts/NavbarLayout.svelte";
+  import HeroLayout from "../components/layouts/HeroLayout.svelte"
 </script>
 
 <main>
   <NavbarLayout />
-  <h1 class="text-sm">hello world</h1>
+  <HeroLayout/>
 </main>

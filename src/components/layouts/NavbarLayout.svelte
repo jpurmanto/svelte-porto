@@ -6,18 +6,18 @@
   };
 </script>
 
-<nav class="fixed w-full backdrop-blur-lg bg-opacity-30" style="z-index: 2;">
+<nav class="fixed w-full backdrop-blur-lg bg-opacity-30 text-tokyo-night-foreground z-50">
   <div class="mx-auto">
-    <div class="flex mx-auto justify-between w-5/6 p-5">
+    <div class="flex mx-auto justify-between w-5/6 py-5">
       <div class="flex items-center gap-5">
-        <span class="text-3xl font-bold">r code.</span>
+        <span class="text-3xl font-bold">slowcode07</span>
       </div>
       <div class="hidden lg:flex gap-8 ml-auto">
-        <a href="#" class="rounded-full hover:bg-gray-100 px-4 py-2">Home</a>
-        <a href="#" class="rounded-full hover:bg-gray-100 px-4 py-2">About</a>
-        <a href="#" class="rounded-full hover:bg-gray-100 px-4 py-2">Experience</a>
-        <a href="#" class="rounded-full hover:bg-gray-100 px-4 py-2">Projects</a>
-        <a href="#" class="rounded-full hover:bg-gray-100 px-4 py-2">Contact</a>
+        <a href="#" class="rounded-full hover:bg-gray-800 px-4 py-2">Home</a>
+        <a href="#" class="rounded-full hover:bg-gray-800 px-4 py-2">About</a>
+        <a href="#" class="rounded-full hover:bg-gray-800 px-4 py-2">Experience</a>
+        <a href="#" class="rounded-full hover:bg-gray-800 px-4 py-2">Projects</a>
+        <a href="#" class="rounded-full hover:bg-gray-800 px-4 py-2">Contact</a>
       </div>
       <div class="flex gap-6 lg:hidden">
         <button on:click={toggleNavbar}>
@@ -28,13 +28,13 @@
       </div>
     </div>
   </div>
-  <div class={`fixed z-40 w-full overflow-hidden flex flex-col lg:hidden gap-12 origin-top duration-700 ${toggleMenu ? 'h-[320px]' : 'h-0'}`}>
-    <div class="w-[90%] mt-5 h-[110%] mx-[5%] relative backdrop-filter bg-black backdrop-blur-lg bg-opacity-60 py-5 border border-white rounded-md">
+  <div class={`fixed w-full overflow-x-hidden flex flex-col lg:hidden gap-12 origin-top duration-700 ${toggleMenu ? 'h-[320px]' : 'h-0'}`}>
+    <div class="w-[90%] mt-5 mx-[5%] relative backdrop-filter bg-tokyo-night-darkBlue backdrop-blur-lg bg-opacity-90 py-5 border border-white rounded-md">
       <div class="mx-8 flex flex-col gap-8 font-bold tracking-wider">
         <a href="#">Home</a>
         <a href="#">About</a>
-        <a href="#">Jobs</a>
-        <a href="#">Category</a>
+        <a href="#">Experience</a>
+        <a href="#">Projects</a>
         <a href="#">Contact</a>
       </div>
     </div>
