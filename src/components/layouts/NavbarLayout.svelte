@@ -6,7 +6,7 @@
   };
 </script>
 
-<nav class="fixed w-full backdrop-blur-lg bg-opacity-30 text-tokyo-night-foreground z-50">
+<nav class="fixed w-full backdrop-blur-lg bg-opacity-90 text-tokyo-night-foreground bg-tokyo-night-background z-50">
   <div class="mx-auto">
     <div class="flex mx-auto justify-between w-5/6 py-5">
       <div class="flex items-center gap-5">
