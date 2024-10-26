@@ -5,7 +5,7 @@
   import HeroDescription from "../fragments/HeroDescription.svelte";
 </script>
 
-<main class="flex justify-center items-center h-screen bg-tokyo-night-background text-tokyo-night-foreground">
+<section class="flex justify-center items-center h-screen bg-tokyo-night-background text-tokyo-night-foreground">
   <div class="flex flex-col sm:flex-row max-w-5xl mx-auto px-4 sm:px-6 w-full">
     <div class="w-full sm:w-1/2 flex justify-center items-center">
       <ProfileImage />
@@ -19,5 +19,5 @@
       </div>
     </div>
   </div>
-</main>
+</section>
 
